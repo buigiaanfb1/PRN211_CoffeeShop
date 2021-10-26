@@ -26,9 +26,9 @@ namespace CoffeApp
         private void btnLogin_Click(object sender, EventArgs e)
         {
             frmMain newpage = new frmMain();
-            Hide();
-            newpage.Show();
-            Close();
+            this.Hide();
+            newpage.ShowDialog();
+            this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e) => Close();
