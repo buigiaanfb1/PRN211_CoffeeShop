@@ -17,8 +17,6 @@ namespace CoffeApp
             InitializeComponent();
         }
 
-        private void lbExit_Click(object sender, EventArgs e) => Close();
-
         private void lbClear_Click(object sender, EventArgs e)
         {
             txtUsername.Clear();
@@ -32,5 +30,7 @@ namespace CoffeApp
             newpage.Show();
             Close();
         }
+
+        private void btnExit_Click(object sender, EventArgs e) => Close();
     }
 }
