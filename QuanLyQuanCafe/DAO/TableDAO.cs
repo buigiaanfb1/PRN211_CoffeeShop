@@ -20,7 +20,13 @@ namespace QuanLyQuanCafe.DAO
 
         public static int TableWidth = 90;
         public static int TableHeight = 90;
+
         private TableDAO() { }
+
+        public void SwitchTable(int id1, int id2)
+        {
+            DataProvider.Instance.ExecuteQuery("USP_SwitchTabel @idTable1 , @idTabel2", new object[] { id1, id2 });
+        }
 
         public List<Table> LoadTableList()
         {
@@ -28,11 +34,12 @@ namespace QuanLyQuanCafe.DAO
 
             DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetTableList");
 
-            foreach(DataRow item in data.Rows)
+            foreach (DataRow item in data.Rows)
             {
                 Table table = new Table(item);
                 tableList.Add(table);
             }
+
             return tableList;
         }
     }

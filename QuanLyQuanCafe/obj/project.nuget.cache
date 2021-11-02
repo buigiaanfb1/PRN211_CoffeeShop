@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zchg4h/32EPxkzReJT0gSvHL5tHO2VwLtLazs1U4MmvL+Fh3ZHSXy55wm8ZgoFa9YGVPcNCIhJBzm3JS4ISP1Q==",
+  "dgSpecHash": "0GJbW9IRuSklOqz1JnQ9LXMmf0ARxDuAC4VaXlsdvSSPSo8jnlvewaP1n7CCfMw0MmQhoO1KjiNyusVBRvSN1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\An An\\source\\repos\\CoffeShop\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
+  "projectFilePath": "C:\\Users\\An An\\source\\repos\\CoffeeShop\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\An An\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\An An\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\An An\\source\\repos\\CoffeShop\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
+      "projectUniqueName": "C:\\Users\\An An\\source\\repos\\CoffeeShop\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
       "projectName": "QuanLyQuanCafe",
-      "projectPath": "C:\\Users\\An An\\source\\repos\\CoffeShop\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
+      "projectPath": "C:\\Users\\An An\\source\\repos\\CoffeeShop\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
       "packagesPath": "C:\\Users\\An An\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\An An\\source\\repos\\CoffeShop\\QuanLyQuanCafe\\obj\\",
+      "outputPath": "C:\\Users\\An An\\source\\repos\\CoffeeShop\\QuanLyQuanCafe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\An An\\AppData\\Roaming\\NuGet\\NuGet.Config",

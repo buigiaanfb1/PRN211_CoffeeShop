@@ -1,4 +1,5 @@
 ﻿using QuanLyQuanCafe.DAO;
+using QuanLyQuanCafe.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,22 +23,23 @@ namespace QuanLyQuanCafe
         {
             string userName = txbUserName.Text;
             string passWord = txbPassWord.Text;
-         if (Login(userName, passWord))
+            if (Login(userName, passWord))
             {
-                fTableManager f = new fTableManager();
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                fTableManager f = new fTableManager(loginAccount);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
-            }else
+            }
+            else
             {
-                MessageBox.Show("Sai ten tai khoan va mat khau!");
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
             }
         }
 
-        bool Login(string username, string password)
+        bool Login(string userName, string passWord)
         {
-            return AccountDAO.Instance.Login(username, password);
-            return false;
+            return AccountDAO.Instance.Login(userName, passWord);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -51,11 +53,6 @@ namespace QuanLyQuanCafe
             {
                 e.Cancel = true;
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
