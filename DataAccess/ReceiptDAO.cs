@@ -47,6 +47,35 @@ namespace DataAccess
             }
         }
 
+        public List<ReceiptObject> GetReceiptsForTable(int idtable)
+        {
+            try
+            {
+                //int idBill, int idFood, int count
+                using var context = new QuanLyQuanCafeContext();
+                Bill thatbill = context.Bills.Where(b => b.IdTable == idtable && b.Status == 1).Single();
+                List<BillInfo> oldbill = context.BillInfos.Where(b => b.IdBill == thatbill.Id).ToList();
+                List<Food> dbfood = context.Foods.ToList();
+                List<ReceiptObject> receipts = new List<ReceiptObject>();
+                foreach (BillInfo bill in oldbill)
+                {
+                    Food food = dbfood.SingleOrDefault(f => f.Id == bill.IdFood);
+                    //string foodname, int quantity, decimal price, decimal totalMoney, int foodid
+                    string name = food.Name;
+                    int count = bill.Count;
+                    decimal price = food.Price;
+                    decimal total = price * count;
+                    int foodid = food.Id;
+                    receipts.Add(new ReceiptObject(name, count, price, total, foodid));
+                }
+                return receipts;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public void AddNewOrderIntoReceipt(ReceiptObject receipt, int idbill)
         {
             try

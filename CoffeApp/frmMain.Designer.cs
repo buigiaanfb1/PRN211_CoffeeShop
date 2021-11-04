@@ -48,6 +48,7 @@ namespace CoffeApp
             this.cbTableFood = new System.Windows.Forms.ComboBox();
             this.lbDisplayStaffName = new System.Windows.Forms.Label();
             this.ChildrenFormPanel = new System.Windows.Forms.Panel();
+            this.btnHistory = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.FoodPanelSub.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,6 +60,7 @@ namespace CoffeApp
             // 
             this.panelSideMenu.Controls.Add(this.FoodPanelSub);
             this.panelSideMenu.Controls.Add(this.btnFoodManagement);
+            this.panelSideMenu.Controls.Add(this.btnHistory);
             this.panelSideMenu.Controls.Add(this.btnLogout);
             this.panelSideMenu.Controls.Add(this.btnCheckout);
             this.panelSideMenu.Controls.Add(this.btnOrder);
@@ -75,7 +77,7 @@ namespace CoffeApp
             this.FoodPanelSub.Controls.Add(this.btnViewFood);
             this.FoodPanelSub.Controls.Add(this.btnCreate);
             this.FoodPanelSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FoodPanelSub.Location = new System.Drawing.Point(0, 260);
+            this.FoodPanelSub.Location = new System.Drawing.Point(0, 305);
             this.FoodPanelSub.Name = "FoodPanelSub";
             this.FoodPanelSub.Size = new System.Drawing.Size(262, 124);
             this.FoodPanelSub.TabIndex = 5;
@@ -116,7 +118,7 @@ namespace CoffeApp
             // btnFoodManagement
             // 
             this.btnFoodManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFoodManagement.Location = new System.Drawing.Point(0, 215);
+            this.btnFoodManagement.Location = new System.Drawing.Point(0, 260);
             this.btnFoodManagement.Name = "btnFoodManagement";
             this.btnFoodManagement.Size = new System.Drawing.Size(262, 45);
             this.btnFoodManagement.TabIndex = 4;
@@ -143,6 +145,7 @@ namespace CoffeApp
             this.btnCheckout.TabIndex = 2;
             this.btnCheckout.Text = "Check out";
             this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // btnOrder
             // 
@@ -244,6 +247,16 @@ namespace CoffeApp
             this.ChildrenFormPanel.Size = new System.Drawing.Size(836, 500);
             this.ChildrenFormPanel.TabIndex = 7;
             // 
+            // btnHistory
+            // 
+            this.btnHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistory.Location = new System.Drawing.Point(0, 215);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(262, 45);
+            this.btnHistory.TabIndex = 6;
+            this.btnHistory.Text = "View Order History";
+            this.btnHistory.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -287,5 +300,6 @@ namespace CoffeApp
         private System.Windows.Forms.Label lbTips;
         private System.Windows.Forms.Button btnNewOrder;
         private System.Windows.Forms.Label lbTableIndex;
+        private System.Windows.Forms.Button btnHistory;
     }
 }

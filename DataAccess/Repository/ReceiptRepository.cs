@@ -12,5 +12,6 @@ namespace DataAccess.Repository
         public List<ReceiptObject> GetReceipts(int idbill) => ReceiptDAO.Instance.GetReceipts(idbill);
         public void UpdateCurrentReceipt(ReceiptObject receipt, int idbill) => ReceiptDAO.Instance.UpdateCurrentReceipt(receipt, idbill);
         public void RemoveCurrentReceipt(ReceiptObject receipt, int idbill) => ReceiptDAO.Instance.RemoveCurrentReceipt(receipt, idbill);
+        public List<ReceiptObject> GetReceiptsForTable(int idtable) => ReceiptDAO.Instance.GetReceiptsForTable(idtable);
     }
 }

@@ -65,3 +65,5 @@ D:\0ErrorsIsBene\CN5\ProjectCoffeShop\CoffeApp\obj\Debug\net5.0-windows\CoffeApp
 D:\0ErrorsIsBene\CN5\ProjectCoffeShop\CoffeApp\obj\Debug\net5.0-windows\CoffeApp.frmUpdateFood.resources
 D:\0ErrorsIsBene\CN5\ProjectCoffeShop\CoffeApp\obj\Debug\net5.0-windows\CoffeApp.frmOrder.resources
 D:\0ErrorsIsBene\CN5\ProjectCoffeShop\CoffeApp\obj\Debug\net5.0-windows\CoffeApp.frmOrderInput.resources
+D:\0ErrorsIsBene\CN5\ProjectCoffeShop\CoffeApp\obj\Debug\net5.0-windows\CoffeApp.frmCheckout.resources
+D:\0ErrorsIsBene\CN5\ProjectCoffeShop\CoffeApp\obj\Debug\net5.0-windows\CoffeApp.frmConfirmCheckout.resources

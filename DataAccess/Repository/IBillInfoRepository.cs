@@ -10,5 +10,6 @@ namespace DataAccess.Repository
     {
         List<BillInfo> GetListBillInfo();
         List<ReceiptObject> GetReceiptForStaff(int idbill);
+        bool IsReceiptEmpty(int idbill);
     }
 }

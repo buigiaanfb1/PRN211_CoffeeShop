@@ -13,5 +13,8 @@ namespace DataAccess.Repository
         public int GetLatestBill(int tableID) => BillDAO.Instance.GetLatestBill(tableID);
         public void SetSuspendedBill(int idbill) => BillDAO.Instance.SetSuspendedBill(idbill);
         public bool CheckBillStatus(int tableindex) => BillDAO.Instance.CheckBillStatus(tableindex);
+        public int GetCountingBill(int tableID) => BillDAO.Instance.GetCountingBill(tableID);
+        public void ConfirmCheckout(int idbill, int discount, decimal total) =>
+            BillDAO.Instance.ConfirmCheckout(idbill, discount, total);
     }
 }
