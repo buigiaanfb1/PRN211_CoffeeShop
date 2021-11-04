@@ -59,5 +59,22 @@ namespace DataAccess
                 throw new Exception(eX.Message);
             }
         }
+
+        public bool IsReceiptEmpty(int idbill) //true mean empty
+        {
+            try
+            {
+                using var context = new QuanLyQuanCafeContext();
+                var QueryCheck = from billy in context.BillInfos
+                                 where billy.IdBill == idbill
+                                 select billy;
+                if (QueryCheck.Any()) return false;
+                else return true;
+            }
+            catch (Exception eX)
+            {
+                throw new Exception(eX.Message);
+            }
+        }
     }
 }

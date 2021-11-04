@@ -75,7 +75,22 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
-
+        public int GetCountingBill(int tableID) //return billid
+        {
+            try
+            {
+                using var context = new QuanLyQuanCafeContext();
+                //datecheckin, int idtable, int status, int discount, decimal totalprice
+                var QueryCheck = from bill in context.Bills
+                                 where bill.IdTable == tableID && bill.Status == 1
+                                 select bill.Id;
+                return QueryCheck.Single();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public bool CreateNewReceipt(int idtable) //checkin
         {
             try
@@ -102,6 +117,25 @@ namespace DataAccess
                 Bill receipt = context.Bills.SingleOrDefault(b => b.Id == idbill);
                 receipt.Status = 2;
                 context.Bills.Update(receipt);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void ConfirmCheckout(int idbill, int discount, decimal total)
+        {
+            try
+            {
+                using var context = new QuanLyQuanCafeContext();
+                Bill thisbill = context.Bills.SingleOrDefault(b => b.Id == idbill);
+                thisbill.DateCheckOut = DateTime.Now;
+                thisbill.Status = 3;
+                thisbill.Discount = discount;
+                thisbill.TotalPrice = total;
+                context.Bills.Update(thisbill);
                 context.SaveChanges();
             }
             catch (Exception ex)

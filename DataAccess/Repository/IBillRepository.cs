@@ -13,5 +13,7 @@ namespace DataAccess.Repository
         int GetLatestBill(int tableID);
         void SetSuspendedBill(int idbill);
         bool CheckBillStatus(int tableindex);
+        int GetCountingBill(int tableID);
+        void ConfirmCheckout(int idbill, int discount, decimal total);
     }
 }

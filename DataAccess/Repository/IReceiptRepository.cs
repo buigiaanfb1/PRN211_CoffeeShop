@@ -12,5 +12,6 @@ namespace DataAccess.Repository
         List<ReceiptObject> GetReceipts(int idbill);
         void UpdateCurrentReceipt(ReceiptObject receipt, int idbill);
         void RemoveCurrentReceipt(ReceiptObject receipt, int idbill);
+        List<ReceiptObject> GetReceiptsForTable(int idtable);
     }
 }

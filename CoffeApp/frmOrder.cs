@@ -14,15 +14,17 @@ namespace CoffeApp
 {
     public partial class frmOrder : Form
     {
-        public frmOrder(string tableindex, bool WhichButton)
+        public frmOrder(string tableindex, bool WhichButton, bool editable)
         {
             InitializeComponent();
             servingtable = tableindex;
             NewOrOld = WhichButton;
+            editing = editable;
         }
 
         private string servingtable;
         private bool NewOrOld; //true = new, false = old
+        private bool editing;
         private IBillInfoRepository billinfo = new BillInfoRepository();
         private IBillRepository bill = new BillRepository();
         private IReceiptRepository receipt = new ReceiptRepository();
@@ -35,6 +37,12 @@ namespace CoffeApp
             {
                 currentbill = bill.GetLatestBill(int.Parse(servingtable.Substring(servingtable.Length - 1)));
                 LoadReceipts();
+                if(!editing)
+                {
+                    btnCreate.Enabled = false;
+                    btnDelete.Enabled = false;
+                    btnUpdate.Enabled = false;
+                }
             }
             else
             {

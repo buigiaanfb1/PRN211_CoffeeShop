@@ -33,7 +33,8 @@ namespace CoffeApp
                 cbTableFood.Items.Add(table.Name);
             }
             btnOrder.Enabled = false;
-            btnCheckout.Enabled = false;
+            //btnCheckout.Enabled = false;
+            lbTips.Text = "Tips: Select The table you want to serve ---->";
         }
 
         private void btnFoodManagement_Click(object sender, EventArgs e)
@@ -77,27 +78,46 @@ namespace CoffeApp
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            ProcessChildForm(new frmOrder(cbTableFood.Text, false));
+            if(billRepo.CheckBillStatus(tableid))
+            {
+                ProcessChildForm(new frmOrder(cbTableFood.Text, false, true));
+            }
+            else
+            {
+                ProcessChildForm(new frmOrder(cbTableFood.Text, false, false));
+            }
+            
         }
 
+        int tableid;
         private void cbTableFood_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnNewOrder.Enabled = true;
             lbTableIndex.Text = "You are serving: " + cbTableFood.Text;
             lbTableIndex.Show();
-            int tableid = int.Parse(cbTableFood.Text.Substring(cbTableFood.Text.Length - 1));
+            tableid = int.Parse(cbTableFood.Text.Substring(cbTableFood.Text.Length - 1));
             //MessageBox.Show("Number: " + tableid);
             if(billRepo.CheckNoBill(tableid))
             {
                 btnNewOrder.Enabled = true;
                 btnOrder.Enabled = false;
                 if (openForm != null) openForm.Close();
+                lbTips.Text = "Tips: This table doesn't have a single order. Press New Receipt to create it";
             }
             else
             {
                 btnOrder.Enabled = true;
                 btnNewOrder.Enabled = true;
-                ProcessChildForm(new frmOrder(cbTableFood.Text, false));
+                if(!billRepo.CheckBillStatus(tableid))
+                {
+                    ProcessChildForm(new frmOrder(cbTableFood.Text, false, false));
+                    lbTips.Text = "Tips: You are viewing the old receipt which have check out";
+                }
+                else
+                {
+                    ProcessChildForm(new frmOrder(cbTableFood.Text, false, true));
+                    lbTips.Text = "Tips: You are viewing the receipt that still on working";
+                }
             }
         }
 
@@ -113,13 +133,13 @@ namespace CoffeApp
                 if (dr == DialogResult.OK)
                 {
                     billRepo.SetSuspendedBill(billindex);
-                    ProcessChildForm(new frmOrder(cbTableFood.Text, true));
+                    ProcessChildForm(new frmOrder(cbTableFood.Text, true, true));
                     lbTips.Text = "Tips: You are creating new receipt for " + cbTableFood.Text;
                 }
             }
             else
             {
-                ProcessChildForm(new frmOrder(cbTableFood.Text, true));
+                ProcessChildForm(new frmOrder(cbTableFood.Text, false, true));
                 lbTips.Text = "Tips: You are creating new receipt for " + cbTableFood.Text;
             }
         }
@@ -130,6 +150,11 @@ namespace CoffeApp
             dr = MessageBox.Show("Are you sure want to quit\nEverything has been saved", "Coffe Management",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (dr == DialogResult.Cancel) e.Cancel = true;
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            ProcessChildForm(new frmCheckout());
         }
     }
 }
