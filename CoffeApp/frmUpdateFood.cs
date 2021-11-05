@@ -39,7 +39,7 @@ namespace CoffeApp
                     MessageBox.Show("Food name must be something not some empty input\nFood is not the air", "Update Information");
                     return;
                 }
-                foodRepo.UpdateFood(new Food(txtFoodName.Text, cbFoodType.SelectedIndex, txtPrice.Value), oldfood);
+                foodRepo.UpdateFood(new Food(txtFoodName.Text, cbFoodType.SelectedIndex + 1, txtPrice.Value), oldfood);
                 LoadFoodList();
             }
             catch(Exception ex)
