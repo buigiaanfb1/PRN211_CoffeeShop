@@ -1,2 +1,3 @@
 # PRN211_CoffeeShop
-i love u
+This winform application is building for Coffee Store Management.
+We love to share this solution to everyone!
