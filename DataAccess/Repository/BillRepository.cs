@@ -8,6 +8,7 @@ namespace DataAccess.Repository
 {
     public class BillRepository : IBillRepository
     {
+        public List<Bill> GetBills() => BillDAO.Instance.GetBills();
         public bool CreateNewReceipt(int idtable) => BillDAO.Instance.CreateNewReceipt(idtable);
         public bool CheckNoBill(int tableID) => BillDAO.Instance.CheckNoBill(tableID);
         public int GetLatestBill(int tableID) => BillDAO.Instance.GetLatestBill(tableID);

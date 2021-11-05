@@ -8,6 +8,7 @@ namespace DataAccess.Repository
 {
     public interface IBillRepository
     {
+        List<Bill> GetBills();
         bool CreateNewReceipt(int idtable);
         bool CheckNoBill(int tableID);
         int GetLatestBill(int tableID);

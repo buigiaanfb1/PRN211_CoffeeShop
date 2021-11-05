@@ -23,6 +23,21 @@ namespace DataAccess
 
         private BillDAO() { }
 
+        public List<Bill> GetBills()
+        {
+            try
+            {
+                using var context = new QuanLyQuanCafeContext();
+                //datecheckin, int idtable, int status, int discount, decimal totalprice
+                List<Bill> fullbill = context.Bills.ToList();
+                return fullbill;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         //secure no data
         public bool CheckNoBill(int tableID)
         {
@@ -116,6 +131,7 @@ namespace DataAccess
                 //datecheckin, int idtable, int status, int discount, decimal totalprice
                 Bill receipt = context.Bills.SingleOrDefault(b => b.Id == idbill);
                 receipt.Status = 2;
+                receipt.TotalPrice = 0;
                 context.Bills.Update(receipt);
                 context.SaveChanges();
             }

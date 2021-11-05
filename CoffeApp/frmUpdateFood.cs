@@ -40,6 +40,7 @@ namespace CoffeApp
                     return;
                 }
                 foodRepo.UpdateFood(new Food(txtFoodName.Text, cbFoodType.SelectedIndex, txtPrice.Value), oldfood);
+                LoadFoodList();
             }
             catch(Exception ex)
             {

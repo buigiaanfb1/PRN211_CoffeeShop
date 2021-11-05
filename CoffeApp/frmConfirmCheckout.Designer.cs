@@ -44,6 +44,7 @@ namespace CoffeApp
             // checkoutTable
             // 
             this.checkoutTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.checkoutTable.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkoutTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.checkoutTable.Location = new System.Drawing.Point(12, 12);
             this.checkoutTable.Name = "checkoutTable";
@@ -69,6 +70,10 @@ namespace CoffeApp
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.Location = new System.Drawing.Point(506, 412);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(94, 29);
@@ -78,6 +83,10 @@ namespace CoffeApp
             // 
             // btnConfirm
             // 
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnConfirm.Location = new System.Drawing.Point(263, 412);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(94, 29);
@@ -88,34 +97,38 @@ namespace CoffeApp
             // 
             // txtMoney
             // 
-            this.txtMoney.Location = new System.Drawing.Point(636, 336);
+            this.txtMoney.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtMoney.Location = new System.Drawing.Point(649, 335);
             this.txtMoney.Name = "txtMoney";
-            this.txtMoney.Size = new System.Drawing.Size(170, 27);
+            this.txtMoney.Size = new System.Drawing.Size(154, 25);
             this.txtMoney.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(711, 366);
+            this.label2.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(691, 363);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 40);
+            this.label2.Size = new System.Drawing.Size(112, 34);
             this.label2.TabIndex = 5;
             this.label2.Text = "Total Money \r\nFor Checkout";
             // 
             // txtDiscount
             // 
+            this.txtDiscount.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtDiscount.Location = new System.Drawing.Point(114, 414);
             this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(143, 27);
+            this.txtDiscount.Size = new System.Drawing.Size(143, 25);
             this.txtDiscount.TabIndex = 6;
             this.txtDiscount.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 416);
+            this.label3.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(31, 418);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.Size = new System.Drawing.Size(77, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Discount";
             // 
@@ -123,6 +136,7 @@ namespace CoffeApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(818, 453);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDiscount);

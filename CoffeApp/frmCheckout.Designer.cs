@@ -36,12 +36,16 @@ namespace CoffeApp
             this.btnT4 = new System.Windows.Forms.Button();
             this.btnT5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnT1
             // 
             this.BtnT1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnT1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnT1.BackColor = System.Drawing.Color.Transparent;
             this.BtnT1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnT1.BackgroundImage")));
             this.BtnT1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnT1.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -49,9 +53,9 @@ namespace CoffeApp
             this.BtnT1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnT1.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnT1.ForeColor = System.Drawing.Color.LightCyan;
-            this.BtnT1.Location = new System.Drawing.Point(142, 108);
+            this.BtnT1.Location = new System.Drawing.Point(151, 72);
             this.BtnT1.Name = "BtnT1";
-            this.BtnT1.Size = new System.Drawing.Size(164, 95);
+            this.BtnT1.Size = new System.Drawing.Size(154, 97);
             this.BtnT1.TabIndex = 0;
             this.BtnT1.Text = "Table No.1";
             this.BtnT1.UseVisualStyleBackColor = false;
@@ -60,16 +64,16 @@ namespace CoffeApp
             // btnT2
             // 
             this.btnT2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnT2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnT2.BackColor = System.Drawing.Color.Transparent;
             this.btnT2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnT2.BackgroundImage")));
             this.btnT2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnT2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnT2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnT2.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnT2.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnT2.Location = new System.Drawing.Point(516, 108);
+            this.btnT2.Location = new System.Drawing.Point(519, 83);
             this.btnT2.Name = "btnT2";
-            this.btnT2.Size = new System.Drawing.Size(164, 95);
+            this.btnT2.Size = new System.Drawing.Size(154, 97);
             this.btnT2.TabIndex = 1;
             this.btnT2.Text = "Table No.2";
             this.btnT2.UseVisualStyleBackColor = false;
@@ -78,16 +82,16 @@ namespace CoffeApp
             // btnT3
             // 
             this.btnT3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnT3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnT3.BackColor = System.Drawing.Color.Transparent;
             this.btnT3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnT3.BackgroundImage")));
             this.btnT3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnT3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnT3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnT3.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnT3.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnT3.Location = new System.Drawing.Point(337, 231);
+            this.btnT3.Location = new System.Drawing.Point(337, 192);
             this.btnT3.Name = "btnT3";
-            this.btnT3.Size = new System.Drawing.Size(164, 95);
+            this.btnT3.Size = new System.Drawing.Size(154, 97);
             this.btnT3.TabIndex = 2;
             this.btnT3.Text = "Table No.3";
             this.btnT3.UseVisualStyleBackColor = false;
@@ -96,16 +100,15 @@ namespace CoffeApp
             // btnT4
             // 
             this.btnT4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnT4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnT4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnT4.BackgroundImage")));
             this.btnT4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnT4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnT4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnT4.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnT4.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnT4.Location = new System.Drawing.Point(142, 355);
+            this.btnT4.Location = new System.Drawing.Point(151, 323);
             this.btnT4.Name = "btnT4";
-            this.btnT4.Size = new System.Drawing.Size(164, 95);
+            this.btnT4.Size = new System.Drawing.Size(154, 97);
             this.btnT4.TabIndex = 3;
             this.btnT4.Text = "Table No.4";
             this.btnT4.UseVisualStyleBackColor = false;
@@ -114,16 +117,15 @@ namespace CoffeApp
             // btnT5
             // 
             this.btnT5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnT5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnT5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnT5.BackgroundImage")));
             this.btnT5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnT5.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnT5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnT5.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnT5.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnT5.Location = new System.Drawing.Point(516, 355);
+            this.btnT5.Location = new System.Drawing.Point(519, 323);
             this.btnT5.Name = "btnT5";
-            this.btnT5.Size = new System.Drawing.Size(164, 95);
+            this.btnT5.Size = new System.Drawing.Size(154, 97);
             this.btnT5.TabIndex = 4;
             this.btnT5.Text = "Table No.5";
             this.btnT5.UseVisualStyleBackColor = false;
@@ -134,12 +136,36 @@ namespace CoffeApp
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(160, 35);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(160, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(510, 26);
             this.label1.TabIndex = 5;
             this.label1.Text = "Choose Which table you want to Checkout\r\n";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.BtnT1);
+            this.panel1.Controls.Add(this.btnT2);
+            this.panel1.Controls.Add(this.btnT4);
+            this.panel1.Controls.Add(this.btnT5);
+            this.panel1.Controls.Add(this.btnT3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(818, 453);
+            this.panel1.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(818, 58);
+            this.panel2.TabIndex = 5;
             // 
             // frmCheckout
             // 
@@ -148,16 +174,14 @@ namespace CoffeApp
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(818, 453);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnT5);
-            this.Controls.Add(this.btnT4);
-            this.Controls.Add(this.btnT3);
-            this.Controls.Add(this.btnT2);
-            this.Controls.Add(this.BtnT1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "frmCheckout";
             this.Text = "frmCheckout";
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -169,5 +193,7 @@ namespace CoffeApp
         private System.Windows.Forms.Button btnT4;
         private System.Windows.Forms.Button btnT5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

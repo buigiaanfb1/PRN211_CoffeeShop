@@ -23,20 +23,34 @@ namespace CoffeApp
         private IBillRepository bill = new BillRepository();
 
         private void ProcessingCheckout(int tableindex)
-        {
+        {/*
             try
             {
-                if (billinfo.IsReceiptEmpty(bill.GetCountingBill(tableindex)))
+                if (bill.CheckNoBill(tableindex))
                 {
-                    MessageBox.Show("This Table Doesn't order anything.");
+                    MessageBox.Show("This Table doesn't have a single bill (receipt)\n Go create one for this table");
                     return;
                 }
                 else
                 {
-                    frmConfirmCheckout confirm = new frmConfirmCheckout(tableindex);
-                    if (confirm.ShowDialog() == DialogResult.OK)
+                    if(!bill.CheckBillStatus(tableindex))
                     {
-                        MessageBox.Show("Table " + tableindex + "has completed order. You will no longer access to that receipt");
+                        MessageBox.Show("This table have checked out please press the new receipt to continue this.");
+                    }
+                    else
+                    {
+                        if(billinfo.IsReceiptEmpty(bill.GetCountingBill(tableindex)))
+                        {
+                            MessageBox.Show("This table doesn't have any order please add it at order page");
+                        }
+                        else
+                        {
+                            frmConfirmCheckout confirm = new frmConfirmCheckout(tableindex);
+                            if (confirm.ShowDialog() == DialogResult.OK)
+                            {
+                                MessageBox.Show("Table " + tableindex + "has completed order. You will no longer modify that receipt");
+                            }
+                        }
                     }
                 }
             }
@@ -44,6 +58,34 @@ namespace CoffeApp
             {
                 if (ex.Message == "Sequence contains no elements") MessageBox.Show("This Table Doesn't have order");
                 else MessageBox.Show(ex.Message);
+            }*/
+
+            if (bill.CheckNoBill(tableindex))
+            {
+                MessageBox.Show("This Table doesn't have a single bill (receipt)\n Go create one for this table");
+                return;
+            }
+            else
+            {
+                if (!bill.CheckBillStatus(tableindex))
+                {
+                    MessageBox.Show("This table have checked out please press the new receipt to continue this.");
+                }
+                else
+                {
+                    if (billinfo.IsReceiptEmpty(bill.GetCountingBill(tableindex)))
+                    {
+                        MessageBox.Show("This table doesn't have any order please add it at order page");
+                    }
+                    else
+                    {
+                        frmConfirmCheckout confirm = new frmConfirmCheckout(tableindex);
+                        if (confirm.ShowDialog() == DialogResult.OK)
+                        {
+                            MessageBox.Show("Table " + tableindex + "has completed order. You will no longer modify that receipt");
+                        }
+                    }
+                }
             }
         }
 
