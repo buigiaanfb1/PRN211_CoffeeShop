@@ -24,6 +24,7 @@ namespace CoffeApp
 
         private ITableRepository tableRepo;
         private IBillRepository billRepo = new BillRepository();
+        private IBillInfoRepository billinfoRepo = new BillInfoRepository();
         private IAccountRepository dao = new AccountRepository();
         private Account staff;
 
@@ -145,6 +146,12 @@ namespace CoffeApp
                 }
                 else
                 {
+                    if(billinfoRepo.IsReceiptEmpty(billRepo.GetCountingBill(tableindex)))
+                    {
+                        MessageBox.Show("Current Receipt for table " + tableindex + " is empty\n" +
+                            "Press Order Page and start it now");
+                        return;
+                    }
                     DialogResult dr;
                     dr = MessageBox.Show("Are you sure want to Create a new receipt for" + cbTableFood.Text
                         + ".\nOld Receipt is not yet CheckOut And will be suspended.", "Coffe Management",
