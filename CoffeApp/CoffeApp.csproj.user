@@ -10,7 +10,13 @@
     <Compile Update="frmCreateFood.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmDetailOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmFoodList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmHistoryOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmLogin.cs">

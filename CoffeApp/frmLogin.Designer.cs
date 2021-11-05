@@ -135,6 +135,7 @@ namespace CoffeApp
             this.txtPassword.Location = new System.Drawing.Point(135, 375);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(229, 27);
             this.txtPassword.TabIndex = 9;
             // 
@@ -160,6 +161,7 @@ namespace CoffeApp
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(280, 36);
             this.btnExit.TabIndex = 11;
+            this.btnExit.TabStop = false;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);

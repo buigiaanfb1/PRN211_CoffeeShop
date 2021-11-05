@@ -42,6 +42,7 @@ namespace CoffeApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ReceiptsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ReceiptsTable.BackgroundColor = System.Drawing.Color.MistyRose;
             this.ReceiptsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ReceiptsTable.Location = new System.Drawing.Point(112, 12);
             this.ReceiptsTable.Name = "ReceiptsTable";
@@ -55,6 +56,11 @@ namespace CoffeApp
             // btnCreate
             // 
             this.btnCreate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.SandyBrown;
+            this.btnCreate.FlatAppearance.BorderSize = 2;
+            this.btnCreate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.NavajoWhite;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCreate.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCreate.Location = new System.Drawing.Point(12, 12);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(94, 70);
@@ -66,6 +72,11 @@ namespace CoffeApp
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.SandyBrown;
+            this.btnUpdate.FlatAppearance.BorderSize = 2;
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.NavajoWhite;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.Location = new System.Drawing.Point(12, 179);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(94, 70);
@@ -77,6 +88,11 @@ namespace CoffeApp
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.SandyBrown;
+            this.btnDelete.FlatAppearance.BorderSize = 2;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.NavajoWhite;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(12, 371);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 70);
@@ -89,6 +105,7 @@ namespace CoffeApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(818, 453);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);

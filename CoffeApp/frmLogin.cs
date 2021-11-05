@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using DataAccess.Repository;
+using BusinessObject.Object;
 using System.Windows.Forms;
 
 namespace CoffeApp
@@ -35,7 +36,8 @@ namespace CoffeApp
             }
             if(dao.Login(txtUsername.Text, txtPassword.Text))
             {
-                frmMain newpage = new frmMain();
+                Account guest = dao.GetAccountByUserName(txtUsername.Text);
+                frmMain newpage = new frmMain(guest);
                 this.Hide();
                 newpage.ShowDialog();
                 this.Close();

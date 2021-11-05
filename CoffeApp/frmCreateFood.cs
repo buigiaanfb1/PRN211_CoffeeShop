@@ -65,5 +65,10 @@ namespace CoffeApp
                 cbCategory.Items.Add(type.Name);
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

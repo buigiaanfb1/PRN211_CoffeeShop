@@ -66,8 +66,10 @@ namespace CoffeApp
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (dr == DialogResult.OK)
             {
+                btnConfirm.Enabled = false;
                 billrepo.ConfirmCheckout(billrepo.GetCountingBill(tableindex),
                     txtDiscount.DecimalPlaces, decimal.Parse(txtMoney.Text));
+                this.Close();
             }
             else
             {

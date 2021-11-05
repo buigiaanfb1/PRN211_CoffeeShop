@@ -43,6 +43,11 @@ namespace CoffeApp
             }
             catch(Exception ex)
             {
+                if(ex.Message.Equals("An error occurred while updating the entries. See the inner exception for details."))
+                {
+                    MessageBox.Show("Food deleted contain in the old bill. Update this food better not delete it");
+                }
+                else
                 MessageBox.Show(ex.Message, "FoodList Warning");
             }
         }
