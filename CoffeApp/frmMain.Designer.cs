@@ -97,7 +97,7 @@ namespace CoffeApp
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(262, 40);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update Current Food";
+            this.btnUpdate.Text = "Update Current Menu";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -110,7 +110,7 @@ namespace CoffeApp
             this.btnViewFood.Name = "btnViewFood";
             this.btnViewFood.Size = new System.Drawing.Size(262, 40);
             this.btnViewFood.TabIndex = 1;
-            this.btnViewFood.Text = "Food List";
+            this.btnViewFood.Text = "Menu List";
             this.btnViewFood.UseVisualStyleBackColor = true;
             this.btnViewFood.Click += new System.EventHandler(this.btnViewFood_Click);
             // 
@@ -123,7 +123,7 @@ namespace CoffeApp
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(262, 40);
             this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "Add New Food";
+            this.btnCreate.Text = "Add New Drink/Food\r\n";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
@@ -138,7 +138,7 @@ namespace CoffeApp
             this.btnFoodManagement.Name = "btnFoodManagement";
             this.btnFoodManagement.Size = new System.Drawing.Size(262, 45);
             this.btnFoodManagement.TabIndex = 4;
-            this.btnFoodManagement.Text = "Food Management";
+            this.btnFoodManagement.Text = "Menu Management\r\n";
             this.btnFoodManagement.UseVisualStyleBackColor = false;
             this.btnFoodManagement.Click += new System.EventHandler(this.btnFoodManagement_Click);
             // 
