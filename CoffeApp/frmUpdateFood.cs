@@ -92,7 +92,7 @@ namespace CoffeApp
                 Food selectedfood = foodRepo.GetFoodByName(oldfood);
                 txtFoodName.Text = selectedfood.Name;
                 txtPrice.Value = selectedfood.Price;
-                cbFoodType.SelectedIndex = selectedfood.IdCategory;
+                cbFoodType.SelectedIndex = selectedfood.IdCategory - 1;
             }
             catch(Exception ex)
             {
