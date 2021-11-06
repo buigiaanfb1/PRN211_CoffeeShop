@@ -41,7 +41,7 @@ namespace DataAccess
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.HasKey(e => e.UserName)
-                    .HasName("PK__Account__C9F2845782036E9C");
+                    .HasName("PK__Account__C9F2845770DB48D5");
 
                 entity.ToTable("Account");
 
@@ -65,10 +65,10 @@ namespace DataAccess
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.DateCheckIn)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.Property(e => e.DateCheckOut).HasColumnType("date");
+                entity.Property(e => e.DateCheckOut).HasColumnType("datetime");
 
                 entity.Property(e => e.Discount).HasColumnName("discount");
 
@@ -76,13 +76,15 @@ namespace DataAccess
 
                 entity.Property(e => e.Status).HasColumnName("status");
 
-                entity.Property(e => e.TotalPrice).HasColumnName("totalPrice");
+                entity.Property(e => e.TotalPrice)
+                    .HasColumnType("money")
+                    .HasColumnName("totalPrice");
 
                 entity.HasOne(d => d.IdTableNavigation)
                     .WithMany(p => p.Bills)
                     .HasForeignKey(d => d.IdTable)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Bill__idTable__44FF419A");
+                    .HasConstraintName("FK__Bill__idTable__38996AB5");
             });
 
             modelBuilder.Entity<BillInfo>(entity =>
@@ -101,13 +103,13 @@ namespace DataAccess
                     .WithMany(p => p.BillInfos)
                     .HasForeignKey(d => d.IdBill)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__BillInfo__idBill__45F365D3");
+                    .HasConstraintName("FK__BillInfo__idBill__398D8EEE");
 
                 entity.HasOne(d => d.IdFoodNavigation)
                     .WithMany(p => p.BillInfos)
                     .HasForeignKey(d => d.IdFood)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__BillInfo__idFood__46E78A0C");
+                    .HasConstraintName("FK__BillInfo__idFood__3A81B327");
             });
 
             modelBuilder.Entity<Food>(entity =>
@@ -124,13 +126,15 @@ namespace DataAccess
                     .HasColumnName("name")
                     .HasDefaultValueSql("(N'Chưa đặt tên')");
 
-                entity.Property(e => e.Price).HasColumnName("price");
+                entity.Property(e => e.Price)
+                    .HasColumnType("money")
+                    .HasColumnName("price");
 
                 entity.HasOne(d => d.IdCategoryNavigation)
                     .WithMany(p => p.Foods)
                     .HasForeignKey(d => d.IdCategory)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Food__idCategory__440B1D61");
+                    .HasConstraintName("FK__Food__idCategory__3B75D760");
             });
 
             modelBuilder.Entity<FoodCategory>(entity =>

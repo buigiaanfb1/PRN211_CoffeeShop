@@ -12,6 +12,16 @@ namespace BusinessObject.Object
             BillInfos = new HashSet<BillInfo>();
         }
 
+        public Bill(DateTime dateCheckIn, DateTime? dateCheckOut, int idTable, int status, int? discount, decimal? totalPrice)
+        {
+            DateCheckIn = dateCheckIn;
+            DateCheckOut = dateCheckOut;
+            IdTable = idTable;
+            Status = status;
+            Discount = discount;
+            TotalPrice = totalPrice;
+        }
+
         public Bill(DateTime dateCheckIn, int idTable, int status, int? discount, decimal? totalPrice)
         {
             DateCheckIn = dateCheckIn;
@@ -20,7 +30,6 @@ namespace BusinessObject.Object
             Discount = discount;
             TotalPrice = totalPrice;
         }
-        //datecheckin, int idtable, int status, int discount, decimal totalprice
 
         public int Id { get; set; }
         public DateTime DateCheckIn { get; set; }

@@ -67,8 +67,9 @@ namespace CoffeApp
             if (dr == DialogResult.OK)
             {
                 btnConfirm.Enabled = false;
+                int disco = Convert.ToInt32(Math.Round(txtDiscount.Value, 0));
                 billrepo.ConfirmCheckout(billrepo.GetCountingBill(tableindex),
-                    txtDiscount.DecimalPlaces, decimal.Parse(txtMoney.Text));
+                    disco, decimal.Parse(txtMoney.Text));
                 this.Close();
             }
             else
